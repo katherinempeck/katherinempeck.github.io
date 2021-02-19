@@ -20,6 +20,17 @@
 </head>
 <body>
 
+  <script>
+    // from https://stackoverflow.com/questions/44018257/how-to-disable-bootstrap-data-spy-on-mobile-device-smaller-resolution
+    // on small screens, disable the scrollspy
+  if ($(window).width() < 768) {
+    $('body').removeAttr('data-spy');
+  }
+  else {
+    $('body').attr('data-spy','scroll');
+  }
+  </script>
+
   <!-- Masthead Code modified from https://startbootstrap.com/snippets/full-image-header -->
   <header class="masthead">
     <img src="/images/lapakahi.jpg" class = "img-responsive" alt = "Lapakahi-Kaiholena">
@@ -43,7 +54,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a target="_blank" href="cv.html">C.V.</a></li>
         <li><a target="_blank" href="research.html">Research</a></li>
-        <li><a target="_blank" href="#">My Web App</a></li>
+        <li><a target="_blank" href="webapp.html">My Web App</a></li>
         <li><a target="_blank" href="https://anthropology.unm.edu/people/grad-students/profile/katherine-peck.html">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
