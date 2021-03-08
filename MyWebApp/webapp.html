@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Visualizing Environmental Variables in Leeward Kohala</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Scripts -->
+
+  <!-- Leaflet.js Library (downloaded) -->
+  <!-- <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script> -->
+  <script src="JS_CSS_downloaded_files/leaflet.js"></script>
+  <!-- Main .js for building leaflet map and interactivity -->
+  <script src="myJS_scripts/leafletContainerData.js"></script>
+  <!-- Turf (turfjs.org) -->
+  <!-- <script src='https://unpkg.com/@turf/turf@6.3.0/turf.min.js'></script> -->
+  <script src="JS_CSS_downloaded_files/turf.min.js"></script>
+  <!-- D3.js Library (downloaded) -->
+  <!-- <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script> -->
+  <script type="text/javascript" src="JS_CSS_downloaded_files/d3.v4.min.js"></script>
+  <!-- jQuery.js library (downloaded) -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="JS_CSS_downloaded_files/jQuery.v3.5.1.min.js"></script>
+  <!-- Bootstrap (for Modal and other website features) (downloaded) -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  <script src="JS_CSS_downloaded_files/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+  <!-- Easy Print, allows for map image export Source: https://github.com/rowanwins/leaflet-easyPrint -->
+  <script src="JS_CSS_downloaded_files/easyPrintdist/bundle.js"></script>
+
+  <!-- Leaflet plugin for dealing with rasters -->
+  <!-- <script src="https://ihcantabria.github.io/Leaflet.CanvasLayer.Field/dist/leaflet.canvaslayer.field.js"></script> -->
+
+  <!-- Stylesheets -->
+
+  <!-- Leaflet CSS (downloaded) -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/> -->
+  <link rel="stylesheet" href="JS_CSS_downloaded_files/leaflet.css">
+  <!-- Main CSS stylesheet -->
+  <link rel="stylesheet" href="myCSS_styleFiles/leafletData_Style.css"/>
+  <!-- Bootstrap CSS (downloaded) -->
+  <link rel="stylesheet" href="JS_CSS_downloaded_files/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+
+  <!-- Data -->
+
+  <!-- Annual Rainfall Isohyets Giambelluce et al. 2013 http://rainfall.geography.hawaii.edu/downloads.html - converted to geojson via arcpy.conversion.FeaturesToJSON() -->
+  <script src="Data/annIsohyet.js"></script>
+  <!-- Rainfall Stations Giambelluca et al. 2013 (used by authors to generate isohyets above), only Hawaii selected, extra data removed -->
+  <script src="Data/cleanStations.js"></script>
+  <!-- Geology -->
+  <script src="Data/kohalaGeo.js"></script>
+  <!-- Field Systems (as Polylines) -->
+  <script src="Data/lineSystems.js"></script>
+  <!-- Environmental Data merged with archaeological data -->
+  <script src="Data/mergedData.js"></script>
+  <!-- Areas with monthly rainfall >90 mm -->
+  <script src="Data/90mmRain.js"></script>
+  <!-- Slope data -->
+  <!-- File was really big and not particularly informative -->
+  <!-- <script src="Data/slopesAg.js"></script> -->
+  <!-- District Boundary -->
+  <script src="Data/kohalaBound.js"></script>
+  <!-- Temperature Data -->
+  <script src="Data/ualaTemp.js"></script>
+
+  <!-- Data - For Models -->
+  <script src="Data/intersectionModels/hawi.js"></script>
+  <script src="Data/intersectionModels/pololu.js"></script>
+  <script src="Data/intersectionModels/suitUala.js"></script>
+  
+
+</head>
+
+<body>
+
+  <div class="container col-sm-9">
+  <h2>Visualizing Environmental Variables in Leeward Kohala</h2>
+  </div>
+
+    <!-- Create Leaflet map container -->
+    <div class= "col-sm-9">
+      <div id="mapId"></div>
+    </div>   
+
+    
+<!-- Set up "About" button modal -->
+<!-- Source: https://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
+
+    <div class="container col-sm-3">
+      <div class="row">
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">About</button>
+    
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+              
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><b>About the project</b></h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4><b>Abstract:</h4></b></h4>
+                    <p>Kohala (the northern peninsula of Hawai&#699;i island) has been farmed by Hawaiians for centuries, using a diverse set of practices (e.g. pondfield and flow irrigation, arboriculture, fixed fields). Some of these agricultural sites, particularly on the leeward (dry) side of the peninsula, are located in areas which do not seem ideal for agriculture, due, for instance, to low rainfall or soil fertility. While human ingenuity and agricultural strategies played a significant role in the success of these systems, environmental variables certainly constrained where Hawaiians could successfully build fields. This web application allows users to visually explore and intersect the environmental variables constraining agriculture in leeward Kohala, Hawaiʻi Island in order to examine which environmental variables played the most important role in placing productive agricultural fields. </p>
+                    <h4><b>About the team:</h4></b></h4>
+                    <p><a href="http://katherinempeck.github.io" target="_blank">Katherine M. Peck</a>, PhD Student (<a href="https://anthropology.unm.edu/people/grad-students/profile/katherine-peck.html" target="_blank">Contact</a>)</p>
+                    <p><a href="http://www.lipingyang.org" target="_blank">Dr. Liping Yang</a> (course instructor of GEOG 485L/585L Internet Mapping)</p>
+                    <h4><b>Acknowledgements:</h4></b></h4>
+                    <p><u>Data Sources:</u></p>
+                    <ul>
+                      <li>Rainfall Gauges and Isohyets: <a href="http://rainfall.geography.hawaii.edu/downloads.html" target="_blank">Rainfall Atlas of Hawai&#699;i (Giambelluca et al. 2013)</a></li>
+                      <li>Geology layer: <a href="https://pubs.usgs.gov/of/2007/1089/" target="_blank">Geologic Map of Hawai&#699;i Shapefile Geodatabase (Sherrod et al. 2007) </a></li>
+                      <li>Field System outlines were generalized based on maps in publications by <a href="https://doi.org/10.1016/j.jasrep.2017.09.021" target="_blank">McIvor and Ladefoged 2018</a> and <a href="https://www.mdpi.com/2071-1050/10/11/3985" target="_blank">Lincoln et al. 2018</a> (Waimea), <a href="https://doi.org/10.1016/j.jas.2009.06.030" target="_blank">Ladefoged et al. 2009</a> and <a href="https://doi.org/10.1080/15564890903178663" target="_blank">Field et al. 2010</a> (Leeward Kohala Field System), and by survey and remote sensing maps generated during Peck's dissertation research (South Kohala Field System).</li>
+                    </ul>
+                    <p><u>Code Examples Referenced:</u></p>
+                    <ul>
+                      <li>This app was built primarily using the <a href="https://leafletjs.com/" target="_blank">Leaflet.js</a> and <a href="https://d3js.org/" target="_blank">D3.js</a> JavaScript libraries.</li>
+                      <li>This app also utilizes the easyPrint plugin for Leaflet.js by <a href="https://github.com/rowanwins/leaflet-easyPrint" target="_blank">Rowan Winsemius</a>.</li>
+                      <li>The rainfall sequence graphs are based on an example provided by <a href="http://bl.ocks.org/Andrew-Reid/11602fac1ea66c2a6d7f78067b2deddb" target="_blank">Andrew Reid</a>.</li>
+                      <li>The Intersection models were built using <a href="https://turfjs.org/" target="_blank">Turf.js</a>.</li>
+                      <li>The About button is based on this <a href="https://www.w3schools.com/bootstrap/bootstrap_modal.asp" target="_blank">Bootstrap Modal Reference</a></li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <u><h4>Instructions</h4></u> 
+            <ul>
+              <li>Turn layers on and off using the <img src="JS_CSS_downloaded_files/images/layers.png" alt="layers"> panel</li>
+              <li>Mouseover to see environmental information for field systems (use side button to turn tooltips on/off)</li>
+              <li>Click on features for more information</li>
+              <li>Use buttons below to add different intersection models to map</li>
+            </ul>
+      </div>
+    </div>
+
+    <div class="container col-sm-3">
+      <div class="row">
+        <u><h4>Intersection Models</h4></u>
+        <p>Select a layer from each menu and click "run" to see where those environmental variables intersect:</p>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Layer 1
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" id="pololu1">Older Surface Geology (Pololu flow)</a></li>
+            <li><a href="#" id="hawi1">Younger Surface Geology (Hawi flow)</a></li>
+            <li><a href="#" id="rain1">At least 2 months rainfall &#8805;90 mm</a></li>
+            <li><a href="#" id="temp1">&#8805;18&#176;C annual temperature</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Layer 2
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" id="pololu2">Older Surface Geology (Pololu flow)</a></li>
+            <li><a href="#" id="hawi2">Younger Surface Geoology (Hawi flow)</a></li>
+            <li><a href="#" id="rain2">At least 2 months rainfall &#8805;90 mm</a></li>
+            <li><a href="#" id="temp2">&#8805;18&#176;C annual temperature</a></li>
+          </ul>
+        </div>
+      </br>
+        <button type="button" id="runIntersect" class="btn btn-primary btn-success">Run</button>
+        <button type="button" id="clearIntersect" class="btn btn-primary btn-danger">Clear</button>
+      </div>
+    </div>
+
+<div class="container col-sm-3">
+  <div class="row">
+    <u><h4>Map Controls</h4></u>
+     <!-- Turns field system tooltips on and off, class (btn-success/-danger) toggles when tooltips are on/off -->
+     <button type="button" id="togFS" class="btn btn-primary btn-success">Toggle Field System Tooltips</button>
+    </div>
+    <div class="row">
+    <!-- Turns sweet potato legend on -->
+    <button type="button" id="togPotato" class="btn btn-primary btn-danger">Toggle Sweet Potato Legend</button>
+  </div>
+  <!-- <div class="row"> -->
+    <!-- Turns slope legend on -->
+    <!-- <button type="button" id="togSlope" class="btn btn-primary btn-danger">Toggle Slope Legend</button>
+  </div> -->
+</div>
+    
+</body>
+</html>
