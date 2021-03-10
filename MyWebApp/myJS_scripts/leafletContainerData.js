@@ -353,8 +353,9 @@ window.onload = function(){
     // This function is tied to a bootstrap button on index page - this turns the mouseover tooltips on and off
     // Button is green when tooltips are on, red when they're off (needs to be removed from conditional to work)
     // Thanks to this StackExchange post! https://stackoverflow.com/questions/39149977/how-to-toggle-between-bootstrap-button-classes-onclick/39150158
+    // Tooltips turned off by default (button is red), on click add or remove layer depending on status (and change button color)
     $("#togFS").click(function() {
-        $(this).toggleClass('btn-success btn-danger');
+        $(this).toggleClass('btn-danger btn-success');
         if(map.hasLayer(archTooltips)) {
             map.removeLayer(archTooltips);
         } else {
@@ -362,9 +363,6 @@ window.onload = function(){
 
         }
     });
-
-    // The mouseover tooltips are added by default, turns on and off using function above
-    archTooltips.addTo(map);
 
     // Add default scale to map
     L.control.scale().addTo(map);
