@@ -340,7 +340,7 @@ window.onload = function(){
         // Create overlayMaps variable - this will include all the layers that can be turned on and off in the "layers" panel (simultaneously)
         var overlayMaps = {
             "Kohala Moku Boundary": mokuBound,
-            "Rainfall Isohyets": isohyets,
+            "Annual Rainfall Isohyets (mm)": isohyets,
             "Field Systems": fSyst,
             "Geology": geology,
             "Rain Gauges": rainPoints,
@@ -438,16 +438,18 @@ window.onload = function(){
     // Hide item in second list (and vice versa)
     // Hide/show text below dropdowns to show which layers have been selected
     
-    var buttonList = ["#pololu1", "#pololu2", "#hawi1", "#hawi2", "#rain1", "#rain2", "#temp1", "#temp2"]
+    var buttonList = ["#pololu1", "#pololu2", "#hawi1", "#hawi2", "#rain1_1", "#rain1_2", "#rain2_1", "#rain2_2", "#temp1", "#temp2"]
     
-    var buttonList2 = [".whichPololu", ".whichPololu1", ".whichHawi", ".whichHawi1", ".whichRain1", ".whichRain", ".whichTemp", ".whichTemp1"]
+    var buttonList2 = [".whichPololu", ".whichPololu1", ".whichHawi", ".whichHawi1", ".whichRain1", ".whichRain1_1", ".whichRain2", ".whichRain2_1", ".whichTemp", ".whichTemp1"]
     
     $(".whichPololu").hide();
     $(".whichPololu1").hide();
     $(".whichHawi").hide();
     $(".whichHawi1").hide();
-    $(".whichRain").hide();
+    $(".whichRain2").hide();
+    $(".whichRain2_1").hide();
     $(".whichRain1").hide();
+    $(".whichRain1_1").hide();
     $(".whichTemp").hide();
     $(".whichTemp1").hide();
     
@@ -475,16 +477,28 @@ window.onload = function(){
         $(".whichHawi1").show()
     })
     
-    $("#rain1").click(function () {
-        f1 = suitUala.features;
-        $("#rain2").hide();
-        $(".whichRain").show()
+    $("#rain1_1").click(function () {
+        f1 = suitUala1.features;
+        $("#rain1_2").hide();
+        $(".whichRain1").show()
     })
     
-    $("#rain2").click(function () {
+    $("#rain1_2").click(function () {
+        f2 = suitUala1.features;
+        $("#rain1_1").hide();
+        $(".whichRain1_1").show()
+    })
+    
+    $("#rain2_1").click(function () {
+        f1 = suitUala.features;
+        $("#rain2_2").hide();
+        $(".whichRain2").show()
+    })
+    
+    $("#rain2_2").click(function () {
         f2 = suitUala.features;
-        $("#rain1").hide();
-        $(".whichRain1").show()
+        $("#rain2_1").hide();
+        $(".whichRain2_1").show()
     })
     
     $("#temp1").click(function () {
