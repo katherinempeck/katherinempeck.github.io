@@ -29,7 +29,7 @@
     </div>
   </header>
 
-  <!-- Navigation bar -->
+<!-- Navigation bar -->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -44,8 +44,16 @@
       <ul class="nav navbar-nav">
         <!-- open all navigation bar links in new tab -->
         <li><a href="cv.html">C.V.</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="MyWebApp/webapp.html" target="_blank">Leeward Kohala Web App</a></li>
+        <!-- <li><a href="research.html">Research</a></li> -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Research
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="research.html">Frieda Butler Lecture and Photos</a></li>
+            <li><a href="MyWebApp/webapp.html" target="_blank">Leeward Kohala Web App</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="MyWebApp/webapp.html" target="_blank">Leeward Kohala Web App</a></li> -->
         <li><a target="_blank" href="https://anthropology.unm.edu/people/grad-students/profile/katherine-peck.html">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -68,7 +76,7 @@
         <li>How did ancient agricultural practices impact the environment?</li>
         <li>How can studying ancient agricultural practices be useful for modern communities?</li>
       </ul>
-      <p>My <a target="_blank" href="research.html">current research</a> focuses on a network of dryland fields in South Kohala, Hawai&#699;i Island.</p>
+      <p>My <a target="_blank" href="research.html">current research</a> focuses on a network of dryland fields in South Kohala, Hawai&#699;i Island. For an example of a recent project, check out the <a href="MyWebApp/webapp.html" target="_blank">Leeward Kohala Web App</a>. This browser app uses JavaScript libraries including <a href="https://leafletjs.com/" target="_blank">Leaflet.js</a> and modules from <a href="https://turfjs.org/" target="_blank">Turf.js</a> to help users visualize environmental variables in Kohala and build hypotheses about how they might impact agricultural suitability.</p>
     </div>
     <!-- empty column for centering -->
     <div class="col-sm-2">

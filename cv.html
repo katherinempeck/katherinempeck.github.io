@@ -40,28 +40,37 @@
   </header>
   
   <!-- Navigation bar -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="index.html">Katherine Peck</a>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="index.html">Katherine Peck</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <!-- open all navigation bar links in new tab -->
+          <li><a href="cv.html">C.V.</a></li>
+          <!-- <li><a href="research.html">Research</a></li> -->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Research
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="research.html">Frieda Butler Lecture and Photos</a></li>
+              <li><a href="MyWebApp/webapp.html" target="_blank">Leeward Kohala Web App</a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="MyWebApp/webapp.html" target="_blank">Leeward Kohala Web App</a></li> -->
+          <li><a target="_blank" href="https://anthropology.unm.edu/people/grad-students/profile/katherine-peck.html">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="cv.html">C.V.</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="MyWebApp/webapp.html" target="_blank">Leeward Kohala Web App</a></li>
-        <li><a target="_blank" href="https://anthropology.unm.edu/people/grad-students/profile/katherine-peck.html">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
 <br>
