@@ -75,6 +75,7 @@
   <script src="Data/intersectionModels/suitUala.js"></script>
   <!-- At least 1 month suitable sweet potato rainfall -->
   <script src="Data/intersectionModels/suitUala1.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>    
   
 
 </head>
@@ -96,6 +97,7 @@
 
     <div class="container col-sm-3">
       <div class="row">
+          <!-- About Modal -->
             <!-- Trigger the modal with a button -->
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">About</button>
     
@@ -138,7 +140,38 @@
                 </div>
               </div>
             </div>
+
+            <!-- Demo Video Modal -->
+
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myDemoModal">Demo Video</button>
+    
+            <!-- Modal -->
+            <div class="modal fade" id="myDemoModal" role="dialog">
+              <div class="modal-dialog">
+              
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><b>Demonstration and Explanation</b></h4>
+                  </div>
+                  <div class="modal-body">
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/1Ukc5VFawpM"></iframe>
+                    <br>
+                    <b>0:00 - 2:16:</b> Background and Data
+                  </br>
+                    <b>2:16 - 4:08:</b> App demonstration and layer explanation
+                  </br>
+                    <b>4:08 - 4:58: </b> Future Work and Acknowledgements
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
             
+ 
             <u><h4>Instructions</h4></u> 
             <ul>
               <li>Turn layers on and off using the <img src="JS_CSS_downloaded_files/images/layers.png" alt="layers"> panel</li>
