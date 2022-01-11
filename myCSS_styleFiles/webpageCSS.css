@@ -1,0 +1,18 @@
+.addBorder {
+    border: 2px solid #000000;
+}
+
+figure {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    text-indent: 0;
+    margin: 0.5em;
+    padding: 0.5em;
+  }
+
+figure figcaption {
+    text-align: center;
+}
