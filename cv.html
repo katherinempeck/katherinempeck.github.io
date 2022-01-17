@@ -12,25 +12,25 @@
   <link rel="stylesheet" href="JS_CSS_downloaded_libraries/w3CSS.css">
   <!-- JS -->
   <script src="JS_CSS_downloaded_libraries/jQuery.js"></script>
+  <script src="JSfiles/scrollspyScript.js"></script>
   <!-- jQuery From CDN -->
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
   <script src="JS_CSS_downloaded_libraries/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
   <!-- Bootstrap JavaScript via CDN -->
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 </head>
-<body>
+<body onload="toggleSpyClass()">
 
   <script>
     // from https://stackoverflow.com/questions/44018257/how-to-disable-bootstrap-data-spy-on-mobile-device-smaller-resolution
     // on small screens, disable the scrollspy
-  if ($(window).width() < 768) {
-    $('body').removeAttr('data-spy');
-  }
-  else {
-    $('body').attr('data-spy','scroll');
-  }
-  </script>
 
+    // Add event listener on window resize event and rerun function
+    // to check whether it should be the spy class on navbar or not.                     
+    $(window).on('resize', toggleSpyClass);
+
+    </script>
+  
   <!-- Masthead Code modified from https://startbootstrap.com/snippets/full-image-header -->
   <header class="masthead">
     <img src="/images/lapakahi.jpg" class = "img-responsive" alt = "Lapakahi-Kaiholena">
