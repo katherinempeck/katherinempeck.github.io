@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- Code Source: W3Schools Bootstrap "Webpage" Template https://www.w3schools.com/bootstrap/bootstrap_templates.asp -->
+<html lang="en">
+<head>
+  <title>2023 SAA Poster</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Stylesheets -->
+  <style>
+    img {
+    border: 30px solid #555;
+    }
+  </style>
+  <link rel="stylesheet" href="myCSS_styleFiles/webpageCSS.css">
+  <!-- Bootstrap stylesheet via CDN -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="JS_CSS_downloaded_libraries/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="JS_CSS_downloaded_libraries/w3CSS.css">
+  <!-- JS -->
+  <script src="JS_CSS_downloaded_libraries/jQuery.js"></script>
+  <!-- jQuery From CDN -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="JS_CSS_downloaded_libraries/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JavaScript via CDN -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->  
+</head>
+
+<body>
+ <!-- Masthead Code modified from https://startbootstrap.com/snippets/full-image-header -->
+ <header class="masthead">
+  <img src="/images/lapakahi.jpg" class = "img-responsive" alt = "Lapakahi-Kaiholena">
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="index.html">Katherine Peck</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <!-- open all navigation bar links in new tab -->
+          <li><a href="cv.html">C.V.</a></li>
+          <!-- <li><a href="research.html">Research</a></li> -->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Research
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="research.html">Dissertation Research</a></li>
+              <li><a href="fbLecture.html" target="_blank">Frieda Butler Lecture</a></li>
+              <li><a href="MyWebApp/webapp.html" target="_blank">Leeward Kohala Web App</a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="MyWebApp/webapp.html" target="_blank">Leeward Kohala Web App</a></li> -->
+          <li><a target="_blank" href="https://anthropology.unm.edu/people/grad-students/profile/katherine-peck.html">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="col-sm-12 text-left">
+    <h3>Automating Archaeological Feature Detection: Unsupervised Classification and Feature Extraction from Satellite Imagery</h3>
+    <p>On 4/1/2023, I presented the poster "Automating Archaeological Feature Detection" at the 88th Annual Meeting of the Society for American Archaeology in the Remote Sensing, Part I: LiDAR and Satellite Imagery general session. 
+        This poster documented the efficacy of a ridge operator filter called a Sato filter (as part of a larger Python workflow) for automating archaeological feature extraction. 
+    </br>
+    </p>
+    <p>
+      <figure>
+        <picture>
+        <!-- <source media="(min-width: 750px)" srcset="images/KohalaFS.jpg"/> -->
+        <a href = "images/posterImage.jpg"><img src="images/posterImage.jpg" alt="SAA 2023 poster" style="height:40%; width:40%" class=addBorder></a>
+        </picture>
+      <figcaption><i>Click to view and download.</i>
+      </figcaption>
+      </figure>
+    </p>
+    <p>This page includes some supplementary information that I was unable to fit on the poster.</p>
+    <h3>Script</h3>
+        <p>I built this tool in Python using Jupyter notebooks. To view the original notebook (with a demo of image 4), click <a href="SAA2023/Peck_SAA_2023_ProjectCode.html" target = "_blank">here</a>.</p>        
+    <h3>Test Images</h3>
+        <p>
+        To assess the efficacy of the Sato filter, I used 6 test images. Three test images were Google Earth images of agricultural features in leeward Kohala, Hawai'i Island.
+        Three test images were Google Earth images of gridded fields near Bryce, southeastern Arizona. These areas were chosen because they are arid areas with little vegetation and are dense in linear, "ridge-like" features. Only two test images (Image 1 and 4) are presented on the poster (see above).
+        The accuracy percentages from Images 2, 3, 5, and 6 are included on the poster but not the images themselves. Instead, I have included them here.
+    </p>
+    <h4>Image 2</h4>
+    <p>Input:</p>
+    <figure>
+        <picture>
+        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
+        </picture>
+      <figcaption><i>Test Image 2</i>
+      </figcaption>
+      </figure>
+    <p>Outputs:</p>
+    <figure>
+        <picture>
+        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
+        </picture>
+      <figcaption><i>Test Image 2 with detected features highlighted.</i>
+      </figcaption>
+      </figure>
+    <h4>Image 3</h4>
+    <figure>
+        <picture>
+        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
+        </picture>
+      <figcaption><i>Test Image 3</i>
+      </figcaption>
+      </figure>
+    <p>Outputs:</p>
+    <figure>
+        <picture>
+        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
+        </picture>
+      <figcaption><i>Test Image 3 with detected features highlighted.</i>
+      </figcaption>
+      </figure>
+    <p>With detection rates of 19.5% and 19.56% respectively, images 2 and 3 had the lowest detection rates of all the test images.</p>
+    <h4>Image 5</h4>
+    <figure>
+        <picture>
+        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
+        </picture>
+      <figcaption><i>Test Image 5</i>
+      </figcaption>
+      </figure>
+    <p>Outputs:</p>
+    <figure>
+        <picture>
+        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
+        </picture>
+      <figcaption><i>Test Image 5 with detected features highlighted.</i>
+      </figcaption>
+      </figure>
+    <h4>Image 6</h4>
+    <figure>
+        <picture>
+        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
+        </picture>
+      <figcaption><i>Test Image 6</i>
+      </figcaption>
+      </figure>
+    <p>Outputs:</p>
+    <figure>
+        <picture>
+        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
+        </picture>
+      <figcaption><i>Test Image 6 with detected features highlighted.</i>
+      </figcaption>
+      </figure>
+    <p></p>
+      
+<h3>Literature Review</h3>
+<p>
+As part of this project, I conducted a review of recently published automated detection research. To see the formatted reference list, click <a href = "SAA2023/SAA2023_RefList.html" target="_blank">here</a>.
+For each paper, I noted the data (e.g. LiDAR, satellite imagery etc.) and method(s) tested, both in terms of the broad category (e.g. machine learning) and the more specific category (e.g. Mask R-CNN).
+If you'd like to take a look at that data, you can view the JSON file <a href = "SAA2023/SAA23_RefList.json" target = "_blank">here</a>. Note that unicode characters had to be stripped from the author names for export.
+</p>
+<p>
+    <i>This research is part of the H2ARP (Hawaiian Historical and Archaeological Research Program) at the University of New Mexico. Visit the <a target="_blank" href="https://anthropology.unm.edu/research/field-projects/project/hawaii-historical-and-archaeological-research-project-h2arp.html">H2ARP webpage</a>
+    to learn more about other ongoing H2ARP research or click "Research" in the navigation bar at the top of this page. </i>
+</p>
+</body>
+</html>
