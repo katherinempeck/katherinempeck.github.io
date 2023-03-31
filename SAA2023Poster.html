@@ -88,76 +88,68 @@
     <h3>Test Images</h3>
         <p>
         To assess the efficacy of the Sato filter, I used 6 test images. Three test images were Google Earth images of agricultural features in leeward Kohala, Hawai'i Island.
-        Three test images were Google Earth images of gridded fields near Bryce, southeastern Arizona. These areas were chosen because they are arid areas with little vegetation and are dense in linear, "ridge-like" features. Only two test images (Image 1 and 4) are presented on the poster (see above).
+        Three test images were Google Earth images of gridded fields near Bryce, southeastern Arizona. These areas were chosen because they are arid areas with little vegetation and are dense in linear, "ridge-like" features. 
+        </p>
+        <figure>
+          <picture>
+          <!-- <source media="(min-width: 750px)" srcset="images/KohalaFS.jpg"/> -->
+          <a href = "images/TestImages/Bryce_Process.png"><img src="images/TestImages/Bryce_Process.png" alt="Bryce Process Test" style="height:40%; width:40%" class=addBorder></a>
+          </picture>
+        <figcaption><i>Image processing results (prior to clustering) of Test Image 4 (Bryce AZ)</i>
+        </figcaption>
+        </figure>
+        <p>
+        Only two test images (Image 1 and 4) are presented on the poster (see above).
         The accuracy percentages from Images 2, 3, 5, and 6 are included on the poster but not the images themselves. Instead, I have included them here.
-    </p>
-    <h4>Image 2</h4>
-    <p>Input:</p>
-    <figure>
-        <picture>
-        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
-        </picture>
-      <figcaption><i>Test Image 2</i>
-      </figcaption>
-      </figure>
-    <p>Outputs:</p>
-    <figure>
-        <picture>
-        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
-        </picture>
-      <figcaption><i>Test Image 2 with detected features highlighted.</i>
-      </figcaption>
-      </figure>
-    <h4>Image 3</h4>
-    <figure>
-        <picture>
-        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
-        </picture>
-      <figcaption><i>Test Image 3</i>
-      </figcaption>
-      </figure>
-    <p>Outputs:</p>
-    <figure>
-        <picture>
-        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
-        </picture>
-      <figcaption><i>Test Image 3 with detected features highlighted.</i>
-      </figcaption>
-      </figure>
-    <p>With detection rates of 19.5% and 19.56% respectively, images 2 and 3 had the lowest detection rates of all the test images.</p>
-    <h4>Image 5</h4>
-    <figure>
-        <picture>
-        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
-        </picture>
-      <figcaption><i>Test Image 5</i>
-      </figcaption>
-      </figure>
-    <p>Outputs:</p>
-    <figure>
-        <picture>
-        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
-        </picture>
-      <figcaption><i>Test Image 5 with detected features highlighted.</i>
-      </figcaption>
-      </figure>
-    <h4>Image 6</h4>
-    <figure>
-        <picture>
-        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
-        </picture>
-      <figcaption><i>Test Image 6</i>
-      </figcaption>
-      </figure>
-    <p>Outputs:</p>
-    <figure>
-        <picture>
-        <img src="" alt="Image x" style="height:40%; width:40%" class=addBorder>
-        </picture>
-      <figcaption><i>Test Image 6 with detected features highlighted.</i>
-      </figcaption>
-      </figure>
-    <p></p>
+        </p>
+    <h4>Image 2 (HI)</h4>
+    <p>Results:</p>
+    <div class="row">
+      <div class="column">
+        <img src="images/TestImages/IMG2_Before.jpg" alt="Before" style="width:100%">
+        <figcaption class="figure-caption text-center"><i>Input</i></figcaption>
+      </div>
+      <div class="column">
+        <img src="images/TestImages/IMG2_Labelled.jpg" alt="Labelled" style="width:100%">
+        <figcaption class="figure-caption text-center"><i>Output (19.5% detected)</i></figcaption>
+      </div>
+    </div>
+    <h4>Image 3 (HI)</h4>
+    <p>Results:</p>
+    <div class="row">
+      <div class="column">
+        <img src="images/TestImages/IMG3_Before.jpg" alt="Before" style="width:100%">
+        <figcaption class="figure-caption text-center"><i>Input</i></figcaption>
+      </div>
+      <div class="column">
+        <img src="images/TestImages/IMG3_Labelled.jpg" alt="Labelled" style="width:100%">
+        <figcaption class="figure-caption text-center"><i>Output (19.56% detected)</i></figcaption>
+      </div>
+    </div>
+    <h4>Image 5 (AZ)</h4>
+    <p>Results:</p>
+    <div class="row">
+      <div class="column">
+        <img src="images/TestImages/IMG5_Before.jpg" alt="Snow" style="width:100%">
+        <figcaption class="figure-caption text-center"><i>Input</i></figcaption>
+      </div>
+      <div class="column">
+        <img src="images/TestImages/IMG5_Labelled.jpg" alt="Forest" style="width:100%">
+        <figcaption class="figure-caption text-center"><i>Output (22.21% detected)</i></figcaption>
+      </div>
+    </div>
+    <h4>Image 6 (AZ)</h4>
+    <p>Results:</p>
+    <div class="row">
+      <div class="column">
+        <img src="images/TestImages/IMG6_Before.jpg" alt="Snow" style="width:100%">
+        <figcaption class="figure-caption text-center"><i>Input</i></figcaption>
+      </div>
+      <div class="column">
+        <img src="images/TestImages/IMG6_Labelled.jpg" alt="Forest" style="width:100%">
+        <figcaption class="figure-caption text-center"><i>Output (40.93% detected)</i></figcaption>
+      </div>
+    </div>
       
 <h3>Literature Review</h3>
 <p>
