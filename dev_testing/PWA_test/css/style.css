@@ -1,8 +1,0 @@
-/* label,input{
-    display:flex;
-    flex-direction:column;
-  } */
-
-  .form-horizontal .control-label.text-left{
-    text-align: left;
-}

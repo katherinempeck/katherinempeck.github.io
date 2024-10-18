@@ -10,6 +10,21 @@
     img {
     border: 30px solid #555;
     }
+    
+    .align-top {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .align-top h3 {
+        margin-top: 0; /* Removes any extra margin above the heading */
+    }
+
+    .col-md-2 {
+        display: inline-block;
+        vertical-align: top;
+    }
+
   </style>
   <link rel="stylesheet" href="myCSS_styleFiles/webpageCSS.css">
   <!-- Bootstrap stylesheet via CDN -->
@@ -51,19 +66,7 @@
           <!-- open all navigation bar links in new tab -->
           <li><a href="cv.html">C.V.</a></li>
           <!-- <li><a href="research.html">Research</a></li> -->
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Research
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-header">Hawaiian Agriculture</li>
-              <li><a href="research.html">Dissertation Research</a></li>
-              <li><a href="fbLecture.html" target="_blank">Frieda Butler Lecture</a></li>
-              <li><a href="MyWebApp/webapp.html" target="_blank">Leeward Kohala Web App</a></li>
-              <li class="dropdown-header">Automated Feature Detection</li>
-              <li><a href="SAA2023Poster.html" target="_blank">88th Annual SAA Poster</a></li>
-            </ul>
-          </li>
-          <!-- <li><a href="MyWebApp/webapp.html" target="_blank">Leeward Kohala Web App</a></li> -->
+          <li><a href="research.html">Research</a></li>
           <li><a target="_blank" href="https://anthropology.unm.edu/people/grad-students/profile/katherine-peck.html">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -71,92 +74,118 @@
       </div>
     </div>
   </nav>
+
   <div class="col-sm-12 text-left">
     <h1>Research</h1>
-    <p>For my ongoing dissertation research, I am investigating an ancient agricultural field system located in the uplands (mauka) of Kawaihae 1 and 2, traditional land tenure units in South Kohala, Hawai'i.
-      These agricultural fields (the South Kohala Field System) are located on the leeward (dry) side of Hawai'i Island.       
-    </br>
-    </p>
-    <p>
-      <!-- <img src="images/KohalaFS.jpg" alt="mauna.jpg" style="height:40%; width:40%" class=addBorder> -->
-      <figure>
-        <picture>
-        <!-- <source media="(min-width: 750px)" srcset="images/KohalaFS.jpg"/> -->
-        <img src="images/KohalaFS.jpg" alt="Field Systems of Kohala" style="height:40%; width:40%" class=addBorder>
-        </picture>
-      <figcaption><i>Field Systems of Kohala
-      </br>
-      Boundaries based on <a href="https://doi.org/10.1016/j.jasrep.2017.09.021" target="_blank">McIvor and Ladefoged 2018</a> (Waimea), <a href="https://www.mdpi.com/2071-1050/10/11/3985" target="_blank">Lincoln et al. 2018</a> (Waimea/Windward Kohala), <a href="https://doi.org/10.1016/j.jas.2011.08.031" target="_blank">Ladefoged et al. 2011</a> (LKFS), and by survey and remote sensing (SKFS)</i>
-      </figcaption>
-      </figure>
-    </p>
-    <p>
-      Kohala was intensively managed and cultivated by Hawaiians using a number of agricultural strategies. On the windward (wet) side, Hawaiians used a mixture of pondfield irrigation and ridgeland cultivation, while the leeward side is characterized by massive networks of fixed-fields.
-      In the South Kohala and Waimea Field Systems, in addition to these fixed-fields, Hawaiians also appeared to use water management strategies. In both field systems, archaeologists have documented flow irrigation ditches and other water management features likes check dams.
-      Constructing such water management systems required a deep understanding of the landscape and its topography as well as complex engineering practices. If you want to learn more about the relationship between the field systems of Kohala and landscape variables, you can take a look at the Leeward Kohala <a target="_blank" href="MyWebApp/webapp.html">web app</a>.
-      Archaeological data on how people managed marginal environments in the past can be useful today. In addition to the archaeological research on these agricultural fields, an important part of this project is sharing data with Hawaiian <a target="_blank" href="https://www.kailapa.org/">community members</a>.
-    </p>
-    <p>
-    To learn more about my research you can watch a <a target="_blank" href="fbLecture.html">virtual lecture I gave in 2020</a> 
-    or take a look at a recent <a target ="_blank" href="SAA2023Poster.html">poster</a> I presented at the 88th Annual Meeting of the Society for American Archaeology.
-    </p>
-    <p>
-    This research is part of the H2ARP (Hawaiian Historical and Archaeological Research Program) at the University of New Mexico. Visit the <a target="_blank" href="https://anthropology.unm.edu/research/field-projects/project/hawaii-historical-and-archaeological-research-project-h2arp.html">H2ARP webpage</a>
-    to learn more about other ongoing H2ARP research. </p>
+  </div>
 
-      
-<!-- Photo Carousel (via w3Schools) -->
-    <!-- <div class="col-sm-5 text-left">
-      <h1>Photos</h1>
-      <p>Click through for some photos from my fieldwork in Hawai&#699;i:</p>  
-      <div id="myCarousel" class="carousel slide" data-ride="carousel"> -->
-        <!-- Indicators -->
-        <!-- <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol> -->
-    
-        <!-- Wrapper for slides -->
+  <div class="col-sm-12 text-left">
+    <h2>Ongoing Projects</h2>
+  </div>
 
-        <!-- replace stock photos with research photos -->
-        <!-- <div class="carousel-inner" style>
-          <div class="item active">
-            <img src="images/mauna.JPG" alt="mauna.jpg" style="height:100%; width:100%">
-            <div class="carousel-caption">
-              <h3>Mauna Kea</h3>
-              <p>The summit of the mountain was covered in snow during my last visit, February 2020</p>
-            </div>
-          </div> -->
-    
-          <!-- <div class="item">
-            <img src="images/kaunaoa_.JPG" alt="kaunaoa.jpg" style="height:100%; width:100%">
-            <div class="carousel-caption">
-              <h3>Kaunao&#699;a</h3>
-              <p>An endemic vine usually found in coastal areas (but this one was in the uplands)</p>
-            </div>
-          </div> -->
-        
-          <!-- <div class="item">
-            <img src="images/puu_.JPG" alt="puu.jpg" style="height:100%; width:100%">
-            <div class="carousel-caption">
-              <h3>Upland Pu&#699;u</h3>
-              <p>Cinder cones on the flank of Kohala Volcano, viewed from Kawaihae</p>
-            </div>
+    <div class="container-fluid" style="padding: 15px;">
+      <div class="row" style="margin-bottom: 15px;">
+          <div class="col-md-2">
+              <a class="image left">
+                <a class="image left"><img src="images/puu_.JPG" alt="Pu'u of Kohala" class="img-responsive" width = '250'/></a>
+              </a>
           </div>
-        </div> -->
-    
-        <!-- Left and right controls -->
-        <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
-        </a>
+          <div class="col-md-10 align-top" style="padding-left: 15px;">
+              <h3>The South Kohala Field System: Historical Ecology of a Marginal Landscape</h3>
+              <p>For my dissertation research, I am examining the ancient agricultural fields of <i>mauka</i> (upland) Kawaihae in South Kohala, Hawai&#699;i Island. These fields are located in an area that receives low annual rainfall compared to other historically cultivated leeward areas.
+                There are a number of different factors - environmental and anthropogenic - that may have influenced the decision to intensively develop this landscape. Using geospatial analysis, soil sampling, radiocarbon dating, and other methods, I hope to assess how these different environmental and anthropogenic factors may have influenced agricultural productivity and strategies in this landscape over time. To learn more about the project:</p>
+              <ul>
+                <li>Watch a <a href="/fbLecture.html" target = "_blank">public virtual lecure</a> I gave in 2020</li>
+                <!-- <li>Link to Infrastructure Chapter</li> -->
+                <li>Explore leeward environmental variables with the <a href="/MyWebApp/webapp.html" target = "_blank">Leeward Kohala Web App</a></li>
+                <!-- <li>Link to SAA Poster?</li> -->
+                 <!-- <li>Visit the Hawaiian Historical and Archaeological Research Program (<a href = "https://anthropology.unm.edu/research/field-projects/project/hawaii-historical-and-archaeological-research-project-h2arp.html" target = "_blank">H<sup>2</sup>ARP</a>) page</li> -->
+              </ul>
+          </div>
       </div>
-    </div> -->
-    <!-- end photo carousel -->
+  </div>
+
+<!-- Uncomment once Piedmont Paper repo is up -->
+
+<div class="container-fluid" style="padding: 15px;">
+  <div class="row" style="margin-bottom: 15px;">
+      <div class="col-md-2">
+          <a class="image left">
+            <a class="image left"><img src="images/lidar.jpg" alt="LiDAR DEM" class="img-responsive" width = '250'/></a>
+          </a>
+      </div>
+      <div class="col-md-10 align-top" style="padding-left: 15px;">
+          <h3>Deep Learning for Archaeological Site Detection</h3>
+          <p>As part of my work at the New Mexico Consortium's <a href="https://appliedfirescience.org/research/cultural-resources/" target = "_blank">Center for Applied Fire and Ecosystem Science</a>, 
+            I have been helping train and test deep learning models for archaeological site detection in LiDAR data. These models will aid in identifying and managing cultural resources on public lands.</p>
+          <ul>
+            <li><a href="https://doi.org/10.31219/osf.io/5q4xb" target="_blank">Semantic segmentation of archaeological features on public lands</a> (preprint, under review)</li> 
+          </ul>
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid" style="padding: 15px;">
+  <div class="row" style="margin-bottom: 15px;">
+      <div class="col-md-2">
+          <a class="image left">
+            <a class="image left"><img src="images/binary_output.jpg" alt="Binary SAM output" class="img-responsive" width = '250'/></a>
+          </a>
+      </div>
+      <div class="col-md-10 align-top" style="padding-left: 15px;">
+          <h3>Segment Anything (SAM) for Ceramic Fabric Analysis</h3>
+          <p>Archaeologists can identify ceramic fabric groups (the combination of clay and other materials that make up a ceramic body) using petrographic thin sections and use these groups to answer broader anthropological questions. Coarse:fine:void ratios are a useful metric for identifying groups, and are usually extracted with the aid of image thresholding algorithms. For this project, my colleague <a href="https://anthropology.unm.edu/people/grad-students/profile/genevive-woodhead.html" target = "_blank">Genevieve Woodhead</a> and I have been assessing whether the computer vision model Segment Anything (SAM) could effectively extract particles and voids from ceramic petrography slide images without additional training.</p>
+          <ul>
+            <li><a href="https://github.com/katherinempeck/evaluating-thresholding-and-sam" target = "_blank">Project Github Repository</a></li>
+            <!-- <li>Link to poster</li> -->
+          </ul>
+      </div>
+  </div>
+  </div>
+
+<div class="container-fluid" style="padding: 15px;">
+  <div class="row" style="margin-bottom: 15px;">
+      <div class="col-md-2">
+          <a class="image left">
+            <a class="image left"><img src="images/Fieldwork.jpg" alt="Recording an artifact" class="img-responsive" width = '250'/></a>
+          </a>
+      </div>
+      <div class="col-md-10 align-top" style="padding-left: 15px;">
+          <h3>Digital Recording Methods</h3>
+          <p>Digital methods for recording archaeological survey and excavation data are becoming more common but are not yet ubiquitous. In my experience, a digital workflow can make post-field analysis more efficient and, if implemented correctly, do the same for in-field site documentation.
+            Over the past few years, and building off the work of others (particularly <a href="https://isaacullah.github.io/A-mobile-field-data-collection-workflow/">Ullah [2017]</a>), I've been working on testing different combinations of devices, software, and post-field tools to find solutions that balance reliability and cost.
+          </p>
+          <ul>
+            <li>A recent digital recording implementation I tested: <a href="https://joshuavallejos.github.io/images/SAA%202023%20Vallejos%20Peck_Garamond.jpg" target = "_blank">Evaluating digital workflows in academic and CRM settings</a> (conference poster) with my colleague <a href="https://joshuavallejos.github.io/" target = "_blank">Joshua Vallejos</a>.</li>
+            <!-- <li>WCSI repo</li> -->
+          </ul>
+      </div>
+  </div>
+</div>
+
+<div class="col-sm-12 text-left">
+  <h2>Past Projects</h2>
+</div>
+
+<div class="container-fluid" style="padding: 15px;">
+  <div class="row" style="margin-bottom: 15px;">
+      <div class="col-md-2">
+          <a class="image left">
+            <a class="image left"><img src="images/safford_example.jpg" alt="Sato-filtered archaeological image" class="img-responsive" width = '250'/></a>
+          </a>
+      </div>
+      <div class="col-md-10 align-top" style="padding-left: 15px;">
+          <h3>Automatic Feature Detection with Signal Processing and Machine Learning</h3>
+          <p>Satellite and aerial images are used for archaeological site prospection worldwide. However, manually detecting and mapping archaeological sites from imagery can be time-consuming. 
+            In this project, I examined whether a <a href="https://scikit-image.org/docs/stable/auto_examples/edges/plot_ridge_filter.html">ridge operator filter</a> called a Sato filter could extract "ridge-like" archaeological features from satellite imagery effectively enough that an unsupervised learning algorithm (<i>k</i>-means clustering) could extract the features.
+          </p>
+          <ul>
+            <li><a href="/images/posterImage.jpg" target = "_blank">View and download</a> the poster I presented on this project at the 88th Annual Meeting of the Society for American Archaeology</li>
+            <li>View the poster's <a href="/SAA2023Poster.html">supplement page</a> with additional information, images, and original Python script</li>
+          </ul>
+      </div>
+  </div>
+</div>
+
 </body>
 </html>
